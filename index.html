@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamingDojo</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id=top></div>
+    <div class="nav flex-center">
+        <h1>Gaming<span>Dojo</span></h1>
+        <!-- interestigly, if I make this a UL, W3 is not happy about it because it contains select and a, so I made it a div -->
+        <div class="nav-links flex-center">
+            <select name="currency" class="currency">
+                <option value="euro">Euro €</option>
+                <option value="usd">USD $</option>
+                <option value="cad">CAD C$</option>
+            </select>
+            <a href="*" class="cart flex-center">
+                <img src="./images/cart-light.png" alt="cart">
+                <span id="cart-count">0</span>
+            </a>
+            <a href="*" class="search"><img src="./images/search-light.png" alt="search"></a>
+        </div>
+    </div>
+    <div class="banner flex-center">
+        <h2 id="highligths">Highligths</h2>
+        <div class="slideshow flex-center">
+            <div class="scroll">
+                <img src="./images/chevron-left.png" alt="scroll left" onclick="previousImg()">
+            </div>
+            <div class="banner-image">
+                <!-- the src is just a placeholder here, if I levae it blank W3 yells at me -->
+                <!-- it is immediately replaced by JS with a valid path on page load -->
+                <img id="slide" src="./images/" alt="banner">
+            </div>
+            <div class="scroll">
+                <img id="right-arrow" src="./images/chevron-left.png" alt="scroll right" onclick="nextImg()">
+            </div>
+        </div>
+        <div class="lines">
+            <p class="line1"></p>
+            <span class="line2"></span>
+            <span class="line3"></span>
+            <span class="line4"></span>
+        </div>
+    </div>
+    <div class="top-games">
+        <div class="card">
+            <img src="./images/cafe-neko.png" alt="cafe neko">
+            <h2>Cafe Neko: Gold Edition</h2>
+            <p class="platforms">
+                <img src="./images/windows.png" alt="available for Windows">
+                <img src="./images/apple.png" alt="available for Mac">
+            </p>
+            <div class="sale flex-center">
+                <button type="button" class="discount">-20%</button>
+                <div class="price-box flex-center">
+                    <p class="original-price">€ 14.98</p>
+                    <h2 class="price">€ 10.49</h2>
+                </div>
+                <button type="button" class="buy" onclick="addToCart()">Buy</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./images/pixel-ninjas-2.png" alt="pixel ninjas">
+            <h2>Pixel Ninja 2</h2>
+            <p class="platforms">
+                <img src="./images/windows.png" alt="available for Windows">
+                <img src="./images/apple.png" alt="available for Mac">
+            </p>
+            <div class="sale flex-center">
+                <button type="button" class="discount">-10%</button>
+                <div class="price-box flex-center">
+                    <p class="original-price">€ 8.19</p>
+                    <h2 class="price">€ 7.39</h2>
+                </div>
+                <button type="button" class="buy" onclick="addToCart('cart-count')">Buy</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./images/stonepunk.png" alt="stonepunk">
+            <h2>Stonepunk 10,000 BCE</h2>
+            <p class="platforms">
+                <img src="./images/windows.png" alt="available for Windows">
+                <img src="./images/apple.png" alt="available for Mac">
+                <img src="./images/linux.png" alt="available for Linux" onclick="linuxAvail()">
+            </p>
+            <div class="sale flex-center">
+                <button type="button" class="discount">NEW</button>
+                <div class="price-box flex-center">
+                    <p class="original-price">-</p>
+                    <h2 class="price">€ 19.99</h2>
+                </div>
+                <button type="button" class="buy" onclick="addToCart('cart-count')">Buy</button>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>

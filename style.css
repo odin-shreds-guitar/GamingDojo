@@ -1,0 +1,175 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #eeeeee;
+}
+
+/* Reviewing the code I noticed I had a bunch of these everywhere */
+/* so I consolidated them in a class of its own to make the CSS clearer */
+.flex-center{
+    display: flex;
+    align-items: center;
+}
+
+/* Nav style */
+/* Colors are exact, I used https://imagecolorpicker.com/ */
+.nav{
+    background-color: black;
+    color: white;
+    height: 85px;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+.nav span{
+    color: #9900ff;
+}
+
+#top{
+    background-color: #9900ff;
+    height: 10px;
+}
+
+.currency{
+    height: 30px;
+    width: 90px;
+    font-size: 18px;
+
+}
+
+.nav-links a{
+    margin: 15px;
+}
+
+.cart, #cart-count{
+    font-size: 20px;
+    color: white;
+}
+
+.nav-links img{
+    height: 50px;
+}
+
+/* Banner style */
+
+#highligths{
+    margin: 15px;
+    margin-right: auto;
+}
+
+.banner{
+    width: 1000px;
+    height: 400px;
+    flex-flow: column;
+    margin: auto;
+    margin-top: 15px;
+    position: relative;
+}
+
+.banner .scroll{
+    max-width: 10%;
+}
+
+.banner #right-arrow{
+    transform: rotate(180deg);
+}
+
+.slideshow{
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.banner-image img{
+    object-fit:contain;
+    width: 800px;
+    height: auto;
+}
+
+.lines{
+    text-align: center;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+}
+
+.line1, .line3, .line4{
+    width: 85px;
+    height: 10px;
+    background-color: #999999;
+}
+
+.line2{
+    background-color: #9900ff;
+    width: 85px;
+    height: 10px;
+}
+
+/* Top games cards style*/
+
+.top-games{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+    margin-top: 40px;
+}
+
+.card{
+    margin: 15px;
+    width: 290px;
+    height: 340px;
+    background-color: white;
+}
+
+.card img{
+    width: inherit;
+}
+
+.card h2, .platforms{
+    margin: 10px;
+}
+
+.platforms img{
+    width: 45px;
+}
+
+.sale{
+    margin-top:30px;
+    padding:10px;
+    justify-content: space-between;
+}
+
+.discount{
+    background-color: #9900ff;
+    color: white;
+    width: 70px;
+    height: 50px;
+    border-style: none;
+}
+
+.buy{
+    background-color: #6aa74f;
+    color: white;
+    width: 70px;
+    height: 50px;
+    border-style: none;
+    box-shadow: 3px 3px black;
+}
+
+.price-box{
+    flex-flow: column;
+    margin: 0px;
+}
+
+.original-price{
+    color: grey;
+    text-decoration: line-through;
+}
